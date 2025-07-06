@@ -146,7 +146,7 @@ class LaravelCartDatabase implements Driver
     /**
      * Resolve the user ID, defaulting to the authenticated user.
      */
-    protected function resolveUserId(?int $userId): int
+    protected function resolveUserId(int|string|null $userId): int|string
     {
         return $userId ?? auth()->id();
     }
